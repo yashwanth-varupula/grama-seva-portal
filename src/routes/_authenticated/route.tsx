@@ -35,7 +35,7 @@ function AuthenticatedLayout() {
   );
 }
 
-function AuthenticatedError({ error, reset }: { error: Error; reset: () => void }) {
+function AuthenticatedError({ error, reset }: { error: any; reset: () => void }) {
   const router = useRouter();
   useEffect(() => {
     reportLovableError(error, { boundary: "authenticated_route_error_component" });
